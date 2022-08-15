@@ -81,7 +81,7 @@ def about():
 		for event in pygame.event.get():
 			
 			if event.type == pygame.KEYDOWN:
-				if event.key == K_ESCAPE:
+				if event.key == pygame.K_ESCAPE:
 					main_menu()
 			if event.type == pygame.QUIT:
 				pygame.quit()
