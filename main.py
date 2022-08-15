@@ -105,7 +105,7 @@ def path_finding(win, width, height, algorithm):
 		draw(win, grid, ROWS, width, height)
 		for event in pygame.event.get():
 
-			if pygame.mouse.get_pressed()[0]: # LEFT
+			if pygame.mouse.get_pressed()[0]: #for left mouse click
 				pos = pygame.mouse.get_pos()
 				row, col = get_clicked_pos(pos, ROWS, width, height)
 				spot = grid[row][col]
@@ -120,7 +120,7 @@ def path_finding(win, width, height, algorithm):
 				elif spot != end and spot != start:
 					spot.make_barrier()
 
-			elif pygame.mouse.get_pressed()[2]: # RIGHT
+			elif pygame.mouse.get_pressed()[2]: #for right mouse click or double finger click
 				pos = pygame.mouse.get_pos()
 				row, col = get_clicked_pos(pos, ROWS, width, height)
 				spot = grid[row][col]
