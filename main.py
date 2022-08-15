@@ -39,9 +39,9 @@ def play():
 				sys.exit()
 			if event.type == pygame.MOUSEBUTTONDOWN:
 				if ASTAR_BUTTON.check_for_input(PLAY_MOUSE_POS):
-					path_finding(SCREEN, 1920, 1080, astar)
+					path_finding(SCREEN, 1280, 720, astar)
 				if DJIKSTRA_BUTTON.check_for_input(PLAY_MOUSE_POS):
-					path_finding(SCREEN, 1920, 1080, djikstra)
+					path_finding(SCREEN, 1280, 720, djikstra)
 				if INSERT_BUTTON.check_for_input(PLAY_MOUSE_POS):
 					sort(insertion_sort, "Insertion Sort")
 				if BUBBLE_BUTTON.check_for_input(PLAY_MOUSE_POS):
@@ -95,7 +95,7 @@ def about():
 
 #pathfinding algorithms
 def path_finding(win, width, height, algorithm):
-	ROWS = 52
+	ROWS = 40
 	grid = make_grid(ROWS, width, height)
 	start = None
 	end = None
