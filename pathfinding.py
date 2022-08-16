@@ -161,9 +161,11 @@ def djikstra(draw, grid, start, end):
 
 	while not open_set.empty():
 		for event in pygame.event.get():
-			if event.type == pygame.QUIT:
-				pygame.quit()
-
+			if event.type == pygame.KEYDOWN:
+				if event.key == pygame.K_q:
+					pygame.quit()
+					sys.exit()
+					
 		current = open_set.get()[2]
 		open_set_hash.remove(current)
 
