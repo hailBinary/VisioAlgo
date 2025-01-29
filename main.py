@@ -64,17 +64,15 @@ def about():
         OPTIONS_RECT = OPTIONS_TEXT.get_rect(center=(640, 100))
 
         #NAMES OF CREATORS
-        PRANIL_BUTTON = get_button((320, 300), "Prabin Dhakal", 40, "#b68f40")
-        SHARAD_BUTTON = get_button((960, 300), "Sharad Kr. Dahal", 36, "#b68f40")
-        SIDDHANT_BUTTON = get_button((320, 450), "Siddhant Thakur", 38, "#b68f40")
-        SIJAN_BUTTON = get_button((960, 450), "Sijan Dev", 40, "#b68f40")
+        PRANIL_BUTTON = get_button((640, 360), "Prabin Dhakal", 40, "#b68f40")
+      
 
         OPTIONS_BACK = Button(image=None, pos=(640, 625), 
                             text_input="BACK", font=get_font(50), base_color="White", hovering_color="Green")
 
         SCREEN.blit(OPTIONS_TEXT, OPTIONS_RECT)
 
-        for button in [PRANIL_BUTTON, SHARAD_BUTTON, SIDDHANT_BUTTON, SIJAN_BUTTON, OPTIONS_BACK]:
+        for button in [PRANIL_BUTTON]:
             button.change_color(OPTIONS_MOUSE_POS)
             button.update(SCREEN)
 
